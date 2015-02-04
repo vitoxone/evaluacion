@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 		for(i=0; i<parsedData.cnt; i++){
 		var name = parsedData.list[i].name;
 		var main = parsedData.list[i].weather[0].main;
-		var description = parsedData.list[i].weather[0].description;
+		var description =(parsedData.list[i].weather[0].description).charAt(0).toUpperCase()+ (parsedData.list[i].weather[0].description).slice(1);
 		var temp = parsedData.list[i].main.temp;
 		var humidity = parsedData.list[i].main.humidity;
 		var pressure = parsedData.list[i].main.pressure;
