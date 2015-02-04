@@ -8,7 +8,7 @@ block content
      h4 #{city.name}
       img(src='http://openweathermap.org/img/w/'+city.icon+'.png')
      p #{city.description}
-     p temperatura: #{city.temperature}°
+     p temperatura actual: #{city.temperature}°
      p humedad: #{city.humidity}%
      p presion atmosferica: #{city.pressure}  hpa
      p velocidad viento: #{city.wind_speed} km/hr
