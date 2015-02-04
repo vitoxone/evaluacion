@@ -7,7 +7,7 @@ block content
   for city in cities
      
      h4 #{city.name}
-      img(src='http://openweathermap.org/img/w/'+#{city.icon}+'.png')
+      img(src='http://openweathermap.org/img/w/'+city.icon+'.png')
      p estado: #{city.main}
      p Descripcion: #{city.description}
      p temperatura: #{city.temperature}
