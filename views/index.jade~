@@ -3,17 +3,29 @@ extends layout
 block content
   h1 #{title}
 
+div
+  table
+    thead
+      tr: th Posts
+    tbody
+      for city in cities
+        tr
+          td 
+             #{city.name} - #{city.description}
+
   for city in cities
      
      h4 #{city.name}
       img(src='http://openweathermap.org/img/w/'+city.icon+'.png')
      p #{city.description}
-     p Temperatura actual: #{city.temperature}°
+     p Temperatura Actual: #{city.temperature}°
      p Humedad: #{city.humidity}%
-     p Presion atmosferica: #{city.pressure}  hpa
-     p Velocidad viento: #{city.wind_speed} km/hr
+     p Presion Atmosferica: #{city.pressure}  hpa
+     p Velocidad Viento: #{city.wind_speed} km/hr
 
 
-#body
+
+
+
 
 
