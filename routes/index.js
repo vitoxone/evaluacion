@@ -15,9 +15,30 @@ router.get('/', function(req, res, next) {
             response.on("data", function(chunk){data = data + chunk});
             response.on("end", function(){
                 var parsedData = JSON.parse(data);
-                console.dir(parsedData);
+                //console.dir(parsedData);
                 var currentTemperature = parsedData.cnt;
-                console.log("The current temperature at that location is "+currentTemperature+".");
+                console.log("Número de ciudades consultadas "+currentTemperature+".");
+		console.log(".........................................................");
+		for(i=0; i<parsedData.cnt; i++){
+		var city = parsedData.list[i].name;
+		var main = parsedData.list[i].weather[0].main;
+		var description = parsedData.list[i].weather[0].description;
+		var temp = parsedData.list[i].main.temp;
+		var humidity = parsedData.list[i].main.humidity;
+		var pressure = parsedData.list[i].main.pressure;
+		var wind_speed = parsedData.list[i].wind.speed;
+		var icon = parsedData.list[i].weather[0].icon;
+
+		console.log("ciudad "+city+".");
+		console.log("estado "+main+".");
+		console.log("description "+description+".");
+		console.log("temperatura "+temp+".");
+		console.log("humedad "+humidity+".");
+		console.log("Presion Atmosférica "+pressure+".");
+		console.log("velocidad del viento "+wind_speed+".");
+		console.log("icono "+icon+".");
+		console.log(".................");
+		}
             });
         })
 
