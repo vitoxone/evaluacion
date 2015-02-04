@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 #{title}
+  p Consultando Condiciones Climáticas
+
+  for city in cities
+     h4 #{city.name}
+     p temperatura: #{city.temperature}
+
+
