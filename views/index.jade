@@ -5,14 +5,16 @@ block content
   p Consultando Condiciones Climáticas
 
   for city in cities
+     
      h4 #{city.name}
+      img(src='http://openweathermap.org/img/w/'+city.icon+'.png')
      p estado: #{city.main}
      p Descripcion: #{city.description}
      p temperatura: #{city.temperature}
      p humedad: #{city.humidity}
      p presion atmosferica: #{city.pressure}
      p velocidad viento: #{city.wind_speed}
-
+     p icono: #{city.icon}
 
 
 #body
