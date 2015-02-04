@@ -26,10 +26,10 @@ router.get('/', function(req, res, next) {
 		var temp = parsedData.list[i].main.temp;
 		var humidity = parsedData.list[i].main.humidity;
 		var pressure = parsedData.list[i].main.pressure;
-		var windspeed = parsedData.list[i].wind.speed;
+		var wind_speed = parsedData.list[i].wind.speed;
 		var icon = parsedData.list[i].weather[0].icon;
 
-		 var newcity = {name: name, main: main, description:description,temperature: temp, humidity:humidity,pressure:pressure,wind_speed:windspeed,icon:icon};
+		 var newcity = {name: name, main: main, description:description,temperature: temp, humidity:humidity,pressure:pressure,wind_speed:wind_speed,icon:icon};
 
 		//cities.push(newcity);
 		cities.splice(i,1,newcity);
@@ -40,7 +40,7 @@ router.get('/', function(req, res, next) {
 		console.log("temperatura "+temp+".");
 		console.log("humedad "+humidity+".");
 		console.log("Presion Atmosférica "+pressure+".");
-		console.log("velocidad del viento "+windspeed+".");
+		console.log("velocidad del viento "+wind_speed+".");
 		console.log("icono "+icon+".");
 		console.log(".................");
 		}

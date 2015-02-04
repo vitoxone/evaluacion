@@ -9,7 +9,7 @@ var cities = [];
 /* GET que envia al index principal los datos de las ciudades en una lista de objetos city. */
 router.get('/', function(req, res, next) {
 /* Primer request a api openweathermap.org. */
- var request = http.get("http://api.openweathermap.org/data/2.5/group?id=3435910,3936456,3871336,5128581,6167865&units=metric", function(response){
+ var request = http.get("http://api.openweathermap.org/data/2.5/group?id=3435910,3936456,3871336,5128581,6167865&units=metric&lang=es", function(response){
             var data = "";
             response.on("data", function(chunk){data = data + chunk});
             response.on("end", function(){
