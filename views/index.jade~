@@ -2,14 +2,12 @@ extends layout
 
 block content
   h1 #{title}
-  p Consultando Condiciones Climáticas
 
   for city in cities
      
      h4 #{city.name}
       img(src='http://openweathermap.org/img/w/'+city.icon+'.png')
-     p estado: if(#{city.main}
-     p Descripcion: #{city.description}
+     p #{city.description}
      p temperatura: #{city.temperature}°
      p humedad: #{city.humidity}%
      p presion atmosferica: #{city.pressure}  hpa
